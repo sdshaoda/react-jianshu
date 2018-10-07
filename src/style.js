@@ -44,4 +44,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+}
 `;

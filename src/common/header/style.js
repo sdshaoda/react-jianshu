@@ -56,7 +56,24 @@ export const NavItem = styled.div`
   }
   &.mode {
     padding: 0 10px 0 15px;
-    font-size: 15px;
+    .i-Aa {
+      font-size: 20px;
+    }
+  }
+`;
+
+export const NavSearchWrapper = styled.span`
+  position: relative;
+  .i-search {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -6px;
+    right: 6px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
   }
 `;
 
@@ -79,7 +96,6 @@ export const NavSearch = styled.input.attrs({
 
 export const Button = styled.div`
   height: 38px;
-  padding: 0 20px;
   float: right;
   line-height: 38px;
   text-align: center;

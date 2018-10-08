@@ -1,10 +1,27 @@
 import React, { Component } from 'react';
+// import { CSSTransition } from 'react-transition-group';
 import { HeaderWrapper, Logo, Nav, NavItem, NavSearchWrapper, NavSearch, Button } from './style';
 
 class Header extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      inputFocus: false,
+    };
+  }
+
+  inputFocus = () => {
+    this.setState({
+      inputFocus: true,
+    });
+  }
+
+  inputBlur = () => {
+    this.setState({
+      inputFocus: false,
+    });
+  }
 
   render() {
     return (
@@ -14,8 +31,14 @@ class Header extends Component {
           <NavItem className="left active">首页</NavItem>
           <NavItem className="left">下载App</NavItem>
           <NavSearchWrapper>
-            <NavSearch />
-            <i className="icon i-search"></i>
+            {/* <CSSTransition
+              in={this.state.inputFocus}
+              timeout={500}
+              classNames="slide"
+            > */}
+            <NavSearch className={this.state.inputFocus ? 'focus' : ''} onFocus={this.inputFocus} onBlur={this.inputBlur} />
+            {/* </CSSTransition> */}
+            <i className={this.state.inputFocus ? 'icon i-search focus' : 'icon i-search'}></i>
           </NavSearchWrapper>
         </Nav>
         <Button className="write">

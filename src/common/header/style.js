@@ -74,7 +74,17 @@ export const NavSearchWrapper = styled.span`
     text-align: center;
     line-height: 30px;
     cursor: pointer;
+    &.focus {
+      background: #969696;
+      color: #fff;
+    }
   }
+  ${'' /* .slide-enter {
+    transition: all 0.5s ease 0.1s;
+  }
+  .slide-exit {
+    transition: all 0.5s ease 0.1s;
+  } */}
 `;
 
 export const NavSearch = styled.input.attrs({
@@ -83,14 +93,18 @@ export const NavSearch = styled.input.attrs({
   width: 160px;
   height: 38px;
   margin: 9px 0 9px 15px;
-  padding: 0 21px;
+  padding: 0 40px 0 20px;
   border: none;
   outline: none;
   border-radius: 19px;
   background: #eee;
   font-size: 14px;
+  transition: all 0.5s ease 0.1s;
   &::placeholder {
     color: #999;
+  }
+  &.focus {
+    width: 240px;
   }
 `;
 

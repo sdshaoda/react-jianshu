@@ -73,6 +73,7 @@ export const NavSearchWrapper = styled.span`
     border-radius: 15px;
     text-align: center;
     line-height: 30px;
+    color: #aaa;
     cursor: pointer;
     &.focus {
       background: #969696;
@@ -99,7 +100,7 @@ export const NavSearch = styled.input.attrs({
   border-radius: 19px;
   background: #eee;
   font-size: 14px;
-  transition: all 0.5s ease 0.1s;
+  transition: all 0.5s ease;
   &::placeholder {
     color: #999;
   }

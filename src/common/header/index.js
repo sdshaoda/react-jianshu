@@ -42,11 +42,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     inputFocus() {
-      const action = creators['inputFocus'];
+      const action = creators['inputFocus']();
       dispatch(action);
     },
     inputBlur() {
-      const action = creators['inputBlur'];
+      const action = creators['inputBlur']();
       dispatch(action);
     }
   }

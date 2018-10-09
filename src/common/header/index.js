@@ -35,7 +35,7 @@ const Header = (props) => (
 
 const mapStateToProps = (state) => {
   return {
-    inputFocused: state.inputFocused
+    inputFocused: state.header.inputFocused
   }
 };
 

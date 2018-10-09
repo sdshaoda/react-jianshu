@@ -1,4 +1,4 @@
-import * as types from '../../../store/actionTypes';
+import * as types from './actionTypes';
 
 const defaultState = {
   inputFocused: false,

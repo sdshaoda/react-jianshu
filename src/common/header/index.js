@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as creators from '../../store/actionCreators';
+import * as creators from './store/actionCreators';
 // import { CSSTransition } from 'react-transition-group';
 import { HeaderWrapper, Logo, Nav, NavItem, NavSearchWrapper, NavSearch, Button } from './style';
 

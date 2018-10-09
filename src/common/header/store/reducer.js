@@ -1,22 +1,22 @@
 import * as types from './actionTypes';
+import { fromJS } from 'immutable';
 
-const defaultState = {
+const defaultState = fromJS({
   inputFocused: false,
-};
+});
 
 const reducer = (state = defaultState, action) => {
-  let newState = JSON.parse(JSON.stringify(state));
   switch (action.type) {
     case types['INPUT_FOCUS']:
-      newState.inputFocused = true;
+      state = state.set('inputFocused', true);
       break;
     case types['INPUT_BLUR']:
-      newState.inputFocused = false;
+      state = state.set('inputFocused', false);
       break;
     default:
       break;
   }
-  return newState;
+  return state;
 }
 
 export default reducer;

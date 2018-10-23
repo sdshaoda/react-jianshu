@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { creators } from './store';
 // import { CSSTransition } from 'react-transition-group';
-import { HeaderWrapper, Logo, Nav, NavItem, NavSearchWrapper, NavSearch, Button } from './style';
+import { HeaderWrapper, Logo, Nav, NavItem, NavSearchWrapper, NavSearch, SearchInfo, SearchInfoTitle, SearchInfoSwitch, SearchInfoItem, Button } from './style';
 
 const Header = (props) => (
   <HeaderWrapper>
@@ -19,6 +19,22 @@ const Header = (props) => (
         <NavSearch className={props.inputFocused ? 'focus' : ''} onFocus={props.inputFocus} onBlur={props.inputBlur} />
         {/* </CSSTransition> */}
         <i className={props.inputFocused ? 'icon i-search focus' : 'icon i-search'}></i>
+        <SearchInfo style={{ display: props.inputFocused ? 'block' : 'none' }}>
+          <SearchInfoTitle>
+            热门搜索
+            <SearchInfoSwitch>换一批</SearchInfoSwitch>
+          </SearchInfoTitle>
+          <div>
+            <SearchInfoItem>行拒杯2018征文</SearchInfoItem>
+            <SearchInfoItem>区块链</SearchInfoItem>
+            <SearchInfoItem>小程序</SearchInfoItem>
+            <SearchInfoItem>毕业</SearchInfoItem>
+            <SearchInfoItem>vue</SearchInfoItem>
+            <SearchInfoItem>PHP</SearchInfoItem>
+            <SearchInfoItem>美食</SearchInfoItem>
+            <SearchInfoItem>flutter</SearchInfoItem>
+          </div>
+        </SearchInfo>
       </NavSearchWrapper>
     </Nav>
     <Button className="write">

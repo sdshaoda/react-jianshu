@@ -143,6 +143,11 @@ export const SearchInfoItem = styled.a`
   border: 1px solid #ddd;
   color: #787878;
   border-radius: 3px;
+
+  &:hover {
+    border: 1px solid #aaa;
+    cursor: pointer;
+  }
 `;
 
 export const Button = styled.div`
